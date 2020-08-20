@@ -1,6 +1,6 @@
-class Rabbit
-    def set_name=(rabbit_name)
-        @name = rabbit_name
+class Pet
+    def set_name=(pet_name)
+        @name = pet_name
     end
 
     def get_name
@@ -14,7 +14,9 @@ class Rabbit
     def get_owner
         return @owner_name
     end
+end
 
+class Rabbit < Pet
     def sniff
         return "sniffsniffsniff"
     end
@@ -22,5 +24,7 @@ end
 
 my_rabbit = Rabbit.new
 my_rabbit.set_name="Boo"
-rabbit_name = my_rabbit.get_name
-puts "#{rabbit_name} says #{my_rabbit.sniff}."
+pet_name = my_rabbit.get_name
+puts "#{pet_name} says #{my_rabbit.sniff}."
+
+puts my_rabbit.inspect
